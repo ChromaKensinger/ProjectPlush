@@ -1,0 +1,65 @@
+[gd_scene load_steps=13 format=3 uid="uid://rwdlwvourc6r"]
+
+[ext_resource type="Script" uid="uid://b1hyst7t3m5tq" path="res://dragon_plush_stand_idle.gd" id="1_n56f7"]
+[ext_resource type="Texture2D" uid="uid://bgjljlq75f7xq" path="res://assets/DragonPlush/Dragon.png/Dragon1.png" id="2_n56f7"]
+[ext_resource type="Texture2D" uid="uid://ct4cuu471g8i5" path="res://assets/DragonPlush/Dragon.png/Dragon2.png" id="3_wkfuk"]
+[ext_resource type="Texture2D" uid="uid://ccf4yqkg0th7v" path="res://assets/DragonPlush/Dragon.png/Dragon3.png" id="4_hwq2g"]
+[ext_resource type="Texture2D" uid="uid://b46d16lgon54y" path="res://assets/DragonPlush/Dragon.png/Dragon4.png" id="5_rftro"]
+[ext_resource type="Texture2D" uid="uid://hun0v81yhxg3" path="res://assets/DragonPlush/Dragon.png/Dragon5.png" id="6_blkjc"]
+[ext_resource type="Texture2D" uid="uid://cxh8veehpsrfw" path="res://assets/DragonPlush/Dragon.png/Dragon6.png" id="7_halgg"]
+[ext_resource type="Texture2D" uid="uid://ddxgq6q1il1x1" path="res://assets/DragonPlush/Dragon.png/Dragon7.png" id="8_570f3"]
+[ext_resource type="Texture2D" uid="uid://by28r6d8relta" path="res://assets/DragonPlush/Dragon.png/Dragon8.png" id="9_tojpi"]
+[ext_resource type="Texture2D" uid="uid://doaowafc85wac" path="res://assets/DragonPlush/Dragon.png/Dragon9.png" id="10_r5k8r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x5i3s"]
+size = Vector2(448, 336)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_463p2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_n56f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wkfuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hwq2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rftro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_blkjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_halgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_570f3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tojpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_r5k8r")
+}],
+"loop": true,
+"name": &"DragonPlush_Stand_Idle",
+"speed": 7.0
+}]
+
+[node name="DragonPlush_Stand_Idle" type="Area2D"]
+script = ExtResource("1_n56f7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(575, 320)
+shape = SubResource("RectangleShape2D_x5i3s")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(592, 320)
+sprite_frames = SubResource("SpriteFrames_463p2")
+animation = &"DragonPlush_Stand_Idle"
+frame = 7
+frame_progress = 0.025105424

@@ -1,0 +1,103 @@
+[gd_scene load_steps=23 format=3 uid="uid://bk71jl17g1e8n"]
+
+[ext_resource type="Texture2D" uid="uid://c4w0vmv2h847" path="res://DragonPlush_Mouth_Idle/mouth_idle_1.png" id="1_030m0"]
+[ext_resource type="Script" uid="uid://dbqbh6gyjedxc" path="res://dragon_plush_mouth_idle.gd" id="1_pb6m0"]
+[ext_resource type="Texture2D" uid="uid://b5qaug6awh8oo" path="res://DragonPlush_Mouth_Idle/mouth_idle_2.png" id="2_pb6m0"]
+[ext_resource type="Texture2D" uid="uid://d0tkdhqb5eg2k" path="res://DragonPlush_Mouth_Idle/mouth_idle_3.png" id="3_uerb5"]
+[ext_resource type="Texture2D" uid="uid://dpbwakpdimrhc" path="res://DragonPlush_Mouth_Idle/mouth_idle_4.png" id="4_olea4"]
+[ext_resource type="Texture2D" uid="uid://dln55w2f1l32" path="res://DragonPlush_Mouth_Idle/mouth_idle_5.png" id="5_84gt7"]
+[ext_resource type="Texture2D" uid="uid://bupb611fuuoov" path="res://DragonPlush_Mouth_Idle/mouth_idle_6.png" id="6_kop5i"]
+[ext_resource type="Texture2D" uid="uid://ufuynug1kdsg" path="res://DragonPlush_Mouth_Idle/mouth_idle_7.png" id="7_4op8d"]
+[ext_resource type="Texture2D" uid="uid://55d7ib1pr42l" path="res://DragonPlush_Mouth_Idle/mouth_idle_8.png" id="8_r64in"]
+[ext_resource type="Texture2D" uid="uid://cacnnicy56pmd" path="res://DragonPlush_Mouth_Idle/mouth_idle_9.png" id="9_sd5fi"]
+[ext_resource type="Texture2D" uid="uid://dsmmy6kxa72ak" path="res://DragonPlush_Mouth_Idle/mouth_idle_10.png" id="10_vigfg"]
+[ext_resource type="Texture2D" uid="uid://b3b3ipiemenj0" path="res://DragonPlush_Mouth_Idle/mouth_idle_11.png" id="11_rt2yb"]
+[ext_resource type="Texture2D" uid="uid://bybfige5jg3wo" path="res://DragonPlush_Mouth_Idle/mouth_idle_12.png" id="12_nyoml"]
+[ext_resource type="Texture2D" uid="uid://wd4sjief50fv" path="res://DragonPlush_Mouth_Idle/mouth_idle_13.png" id="13_ebypb"]
+[ext_resource type="Texture2D" uid="uid://mhkygqc2vv0u" path="res://DragonPlush_Mouth_Idle/mouth_idle_14.png" id="14_exgr3"]
+[ext_resource type="Texture2D" uid="uid://tbaik822a105" path="res://DragonPlush_Mouth_Idle/mouth_idle_15.png" id="15_i374t"]
+[ext_resource type="Texture2D" uid="uid://4htd2u1byojm" path="res://DragonPlush_Mouth_Idle/mouth_idle_16.png" id="16_8dpoj"]
+[ext_resource type="Texture2D" uid="uid://df013npu21aaw" path="res://DragonPlush_Mouth_Idle/mouth_idle_17.png" id="17_bseua"]
+[ext_resource type="Texture2D" uid="uid://bwxciy2vf0dqo" path="res://DragonPlush_Mouth_Idle/mouth_idle_18.png" id="18_16q02"]
+[ext_resource type="Texture2D" uid="uid://dq3s06wd1j0q0" path="res://DragonPlush_Mouth_Idle/mouth_idle_19.png" id="19_p7wy6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_du0d6"]
+size = Vector2(701, 385)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pb6m0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_030m0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pb6m0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uerb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_olea4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_84gt7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kop5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4op8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_r64in")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sd5fi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vigfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rt2yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nyoml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ebypb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_exgr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_i374t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8dpoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bseua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_16q02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_p7wy6")
+}],
+"loop": true,
+"name": &"DragonPlush_Mouth_Idle",
+"speed": 5.0
+}]
+
+[node name="DragonPlush_Mouth_Idle" type="Area2D"]
+script = ExtResource("1_pb6m0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(545.5, 319.5)
+shape = SubResource("RectangleShape2D_du0d6")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(546, 320)
+sprite_frames = SubResource("SpriteFrames_pb6m0")
+animation = &"DragonPlush_Mouth_Idle"
